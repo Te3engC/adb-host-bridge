@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adb-host-bridge"
+version = "0.1.0"
+description = "Automatically discover and use an ADB server running on the host"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+
+[project.scripts]
+hostadb = "adb_host_bridge.cli:main"
+hadb = "adb_host_bridge.adb_proxy:main"
+
+[tool.setuptools]
+packages = ["adb_host_bridge"]
